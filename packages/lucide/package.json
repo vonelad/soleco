@@ -2,6 +2,7 @@
   "name": "@soleco/lucide",
   "version": "0.0.1",
   "description": "Lucide icons as Solid components",
+  "private": false,
   "keywords": [
     "solid",
     "icons",
