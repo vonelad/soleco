@@ -42,8 +42,11 @@ export function createFloating<RT extends ReferenceType = ReferenceType>(
       placement: placement(),
       strategy: strategy(),
       middleware: middleware(),
-      platform: options.platform?.(),
     };
+
+    if(options.platform?.()) {
+      config.platform = options.platform();
+    }
 
     computePosition(_reference, _floating, config).then((result) => {
       setData({ ...result, isPositioned: true });
