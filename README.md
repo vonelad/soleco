@@ -4,6 +4,7 @@
 
 ## Packages
 
-| Package                               | Description                      |
-| ------------------------------------- | -------------------------------- |
-| [`@soleco/lucide`](./packages/lucide) | Lucide icons as Solid components |
+| Package                                         | Description                      |
+| ----------------------------------------------- | -------------------------------- |
+| [`@soleco/lucide`](./packages/lucide)           | Lucide icons as Solid components |
+| [`@soleco/floating-ui`](./packages/floating-ui) | Floating UI for Solid            |
