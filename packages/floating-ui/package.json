@@ -1,0 +1,62 @@
+{
+  "name": "@soleco/floating-ui",
+  "version": "0.0.1",
+  "description": "Floating UI for Solid",
+  "private": false,
+  "keywords": [
+    "solid",
+    "floating-ui",
+    "tooltip",
+    "popover",
+    "modal",
+    "dropdown",
+    "menu",
+    "positioning"
+  ],
+  "homepage": "https://github.com/vonelad/soleco/tree/main/packages/floating-ui",
+  "bugs": "https://github.com/vonelad/soleco/issues",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/vonelad/soleco.git",
+    "directory": "packages/floating-ui"
+  },
+  "license": "MIT",
+  "author": "vonelad",
+  "sideEffects": false,
+  "type": "module",
+  "exports": {
+    ".": "./dist/index.js"
+  },
+  "main": "dist/index.js",
+  "module": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsup"
+  },
+  "devDependencies": {
+    "@types/node": "^20.10.4",
+    "solid-js": "^1.8.7",
+    "tsup": "^8.0.1",
+    "typescript": "^5.3.3"
+  },
+  "peerDependencies": {
+    "solid-js": "^1.8.7"
+  },
+  "tsup": {
+    "clean": true,
+    "dts": true,
+    "format": [
+      "esm"
+    ],
+    "bundle": false,
+    "entryPoints": [
+      "src/*.ts"
+    ]
+  },
+  "dependencies": {
+    "@floating-ui/dom": "^1.5.3"
+  }
+}
