@@ -24,13 +24,13 @@
     ".": "./dist/index.js"
   },
   "main": "dist/index.js",
-  "module": "dist/index.js",
-  "types": "dist/index.d.ts",
   "files": [
+    "src",
     "dist"
   ],
   "scripts": {
-    "build": "tsup"
+    "clean": "rm -rf dist",
+    "build": "tsc"
   },
   "devDependencies": {
     "@types/node": "^20.10.4",
@@ -40,16 +40,5 @@
   },
   "peerDependencies": {
     "solid-js": "^1.8.7"
-  },
-  "tsup": {
-    "clean": true,
-    "dts": true,
-    "format": [
-      "esm"
-    ],
-    "bundle": false,
-    "entryPoints": [
-      "src/*.ts"
-    ]
   }
 }

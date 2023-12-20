@@ -34,7 +34,8 @@
     "dist"
   ],
   "scripts": {
-    "build": "tsup",
+    "clean": "rm -rf dist",
+    "build": "tsc",
     "test": "vitest"
   },
   "devDependencies": {

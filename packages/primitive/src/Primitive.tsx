@@ -51,6 +51,7 @@ const Primitive = NODES.reduce((acc, node) => {
   const Node = (props: PrimitiveProps<typeof node>) => {
     const [local, rest] = splitProps(props, ["asChild", "children"]);
     const Comp = node;
+    // @ts-ignore
     if (!local.asChild) return <Comp {...rest} />;
     // @ts-ignore
     return <>{local.children(rest)}</>;
