@@ -28,36 +28,22 @@
     "./*": "./dist/*.js"
   },
   "main": "dist/index.js",
-  "module": "dist/index.js",
-  "types": "dist/index.d.ts",
   "files": [
+    "src",
     "dist"
   ],
   "scripts": {
-    "build": "tsup",
+    "build": "tsc",
     "compile": "tsx ./compile.ts"
   },
   "devDependencies": {
     "@types/node": "^20.10.4",
     "lucide-static": "^0.298.0",
     "solid-js": "^1.8.7",
-    "tsup": "^8.0.1",
     "tsx": "^4.6.2",
     "typescript": "^5.3.3"
   },
   "peerDependencies": {
     "solid-js": "^1.8.7"
-  },
-  "tsup": {
-    "clean": true,
-    "dts": true,
-    "format": [
-      "esm"
-    ],
-    "bundle": false,
-    "entryPoints": [
-      "src/index.ts",
-      "src/*.tsx"
-    ]
   }
 }
