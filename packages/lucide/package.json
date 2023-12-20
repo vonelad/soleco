@@ -33,6 +33,8 @@
     "dist"
   ],
   "scripts": {
+    "clean": "rm -rf dist",
+    "prebuild": "pnpm clean && pnpm compile",
     "build": "tsc",
     "compile": "tsx ./compile.ts"
   },
