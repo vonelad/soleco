@@ -1,4 +1,11 @@
-import { ComponentProps, JSX, ValidComponent, splitProps } from "solid-js";
+import {
+  type Component,
+  type ComponentProps,
+  type JSX,
+  type ValidComponent,
+  splitProps,
+} from "solid-js";
+import { Dynamic } from "solid-js/web";
 
 const NODES = [
   "a",
@@ -41,7 +48,9 @@ type RegularProps = {
 export type PrimitiveProps<E extends ValidComponent> = BaseProps<E> &
   (AsChildProps<E> | RegularProps);
 
-type Primitives = { [E in (typeof NODES)[number]]: PrimitiveProps<E> };
+type Primitives = {
+  [E in (typeof NODES)[number]]: Component<PrimitiveProps<E>>;
+};
 
 /* -------------------------------------------------------------------------- */
 /*                                  Primitive                                 */
@@ -50,9 +59,9 @@ type Primitives = { [E in (typeof NODES)[number]]: PrimitiveProps<E> };
 const Primitive = NODES.reduce((acc, node) => {
   const Node = (props: PrimitiveProps<typeof node>) => {
     const [local, rest] = splitProps(props, ["asChild", "children"]);
-    const Comp = node;
-    // @ts-ignore
-    if (!local.asChild) return <Comp {...rest} />;
+    if (!local.asChild)
+      // @ts-ignore
+      return <Dynamic component={node} {...rest} children={local.children} />;
     // @ts-ignore
     return <>{local.children(rest)}</>;
   };

@@ -8,7 +8,7 @@
     "sourceMap": true,
     "strict": true,
     "esModuleInterop": true,
-    "jsx": "react-jsx",
+    "jsx": "preserve",
     "jsxImportSource": "solid-js",
   },
   "include": ["src"]
