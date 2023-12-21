@@ -8,4 +8,4 @@
 | ----------------------------------------------- | -------------------------------- |
 | [`@soleco/lucide`](./packages/lucide)           | Lucide icons as Solid components |
 | [`@soleco/floating-ui`](./packages/floating-ui) | Floating UI for Solid            |
-| [`@soleco/primitive`](./packages/primitive)     | Primitive components             |
+| [`@soleco/primitives`](./packages/primitives)   | Radix UI primitive components    |

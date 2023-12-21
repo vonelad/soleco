@@ -10,7 +10,7 @@
   },
   "dependencies": {
     "@soleco/lucide": "workspace:^",
-    "@soleco/primitive": "workspace:^",
+    "@soleco/primitives": "workspace:^",
     "solid-js": "^1.8.7"
   },
   "devDependencies": {
