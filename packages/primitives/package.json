@@ -5,9 +5,14 @@
   "private": false,
   "keywords": [
     "solid",
+    "solidjs",
     "ui",
-    "primitive",
-    "components"
+    "library",
+    "design-system",
+    "components",
+    "headless",
+    "unstyled",
+    "aria"
   ],
   "homepage": "https://github.com/vonelad/soleco/tree/main/packages/primitives",
   "bugs": "https://github.com/vonelad/soleco/issues",
